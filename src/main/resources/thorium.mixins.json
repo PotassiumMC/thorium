@@ -1,0 +1,52 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.potassiummc.thorium.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "server.BundleItemMixin",
+    "server.CommandFunctionManagerMixin",
+    "server.ChorusFlowerBlockMixin",
+    "server.EntityAccessor",
+    "server.FishingRodItemMixin",
+    "server.ItemFrameEntityMixin",
+    "server.JukeboxBlockMixin",
+    "server.LivingEntityInvoker",
+    "server.LivingEntityMixin",
+    "server.MinecraftServerMixin",
+    "server.PrepareRamTaskMixin",
+    "server.PlayerManagerMixin",
+    "server.RaidMixin",
+    "server.ServerPlayerEntityMixin",
+    "server.ServerPlayNetworkHandlerMixin",
+    "server.ShulkerBulletEntityMixin",
+    "server.StatusEffectsMixin",
+    "server.TheEndBiomeSourceMixin",
+    "server.WolfEntityMixin"
+  ],
+  "client": [
+    "client.AddServerScreenMixin",
+    "client.BookEditScreenMixin",
+    "client.BookScreenMixin",
+    "client.CowEntityModelMixin",
+    "client.ClientPlayerEntityInvoker",
+    "client.ClientPlayerEntityMixin",
+    "client.ClientPlayNetworkHandlerMixin",
+    "client.FishingBobberEntityRendererMixin",
+    "client.GameRendererMixin",
+    "client.GoatEntityModelMixin",
+    "client.HeldItemRendererMixin",
+    "client.HoglinEntityModelMixin",
+    "client.IllagerEntityModelMixin",
+    "client.InGameHudMixin",
+    "client.ItemStatsListWidgetMixin",
+    "client.MinecraftClientMixin",
+    "client.PageTurnWidgetMixin",
+    "client.SquidEntityRendererMixin",
+    "client.TextFieldWidgetMixin",
+    "client.WolfEntityModelMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

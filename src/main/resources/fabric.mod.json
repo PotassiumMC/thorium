@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "thorium",
+  "version": "${version}",
+  "name": "thorium",
+  "description": "thorium is a fabric mod that fixes 50+ small bugs and annoyances in Minecraft.",
+  "authors": [
+    "NoahvdAa"
+  ],
+  "contact": {
+    "homepage": "https://github.com/PotassiumMC/thorium",
+    "sources": "https://github.com/PotassiumMC/thorium",
+    "issues": "https://github.com/PotassiumMC/thorium/issues",
+    "discord": "https://discord.gg/bXG8H6PVuS"
+  },
+  "license": "LGPL-3.0-only",
+  "icon": "assets/thorium/icon.png",
+  "accessWidener": "thorium.accesswidener",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.potassiummc.thorium.Thorium"
+    ]
+  },
+  "mixins": [
+    "thorium.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.12.12",
+    "fabric": "*",
+    "minecraft": "1.18.1",
+    "java": ">=17"
+  }
+}
