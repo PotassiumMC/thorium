@@ -35,7 +35,8 @@ jobs:
         if: ${{ runner.os == 'Linux' && matrix.java == '17' }} # Only upload artifacts built from latest java on one OS
         uses: actions/upload-artifact@v2
         with:
-          name: Artifacts
+          name: Thorium Artifacts
+          # Don't copy the sources artifact, only the minecraft-compatible one.
           path: |
             build/libs/thorium-*.jar
             !build/libs/thorium-*-sources.jar

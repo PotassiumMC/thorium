@@ -17,6 +17,7 @@
     "server.PrepareRamTaskMixin",
     "server.PlayerManagerMixin",
     "server.RaidMixin",
+    "server.RamImpactTaskMixin",
     "server.ServerPlayerEntityMixin",
     "server.ServerPlayNetworkHandlerMixin",
     "server.ShulkerBulletEntityMixin",
