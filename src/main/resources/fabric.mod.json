@@ -11,7 +11,8 @@
     "homepage": "https://github.com/PotassiumMC/thorium",
     "sources": "https://github.com/PotassiumMC/thorium",
     "issues": "https://github.com/PotassiumMC/thorium/issues",
-    "discord": "https://discord.gg/bXG8H6PVuS"
+    "discord": "https://discord.gg/bXG8H6PVuS",
+    "irc": "irc://irc.esper.net:6667/potassium"
   },
   "license": "LGPL-3.0-only",
   "icon": "assets/thorium/icon.png",

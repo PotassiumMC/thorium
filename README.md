@@ -10,6 +10,8 @@
 
 thorium is a fabric mod that fixes 50+ small bugs and annoyances in Minecraft.
 
+For support, check out our [Discord](https://discord.gg/bXG8H6PVuS) or [IRC Channels](https://webchat.esper.net/?channels=potassium)!
+
 ### Fixed issues
 
 <!-- Sorry for the horrible table formatting -->
