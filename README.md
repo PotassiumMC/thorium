@@ -8,7 +8,12 @@
 [![Latest Release](https://img.shields.io/github/v/release/PotassiumMC/thorium)](https://github.com/PotassiumMC/thorium/releases)
 [![CurseForge Download Count](https://cf.way2muchnoise.eu/full_thorium_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/thorium)
 
-thorium is a fabric mod that fixes 50+ small bugs and annoyances in Minecraft.
+thorium is a fabric mod that fixes 50+ small bugs and annoyances in Minecraft, without affecting gameplay mechanics.
+
+Because thorium does not affect gameplay mechanics, it is not a hard requirement to have installed on the client or the server when joining a server.
+However, we still recommend installing it on both, since not all issues can be fixed on the server (or client) side.
+
+If you have encountered an issue or would like to request a bugfix, please create an issue on our [issue tracker](https://github.com/PotassiumMC/thorium/issues/new/choose).
 
 For support, check out our [Discord](https://discord.gg/bXG8H6PVuS) or [IRC Channels](https://webchat.esper.net/?channels=potassium)!
 
