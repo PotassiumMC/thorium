@@ -1,0 +1,38 @@
+name: Bugfix Request
+description: Request a fix for a bug in Minecraft.
+labels: [ "status: awaiting triage", "type: Minecraft bug fix" ]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to fill out an issue for thorium! Before making an issue, please check if one exists already.
+        When requesting a fix for a bug in Minecraft, please link the related [Mojira](https://bugs.mojang.com) issue.
+        Please keep in mind that thorium does not fix issues that would require the mod to be installed on both the client and the server.
+        An example of such an issue would be a block not having a primary tool assigned to it, or walk speed being calculated incorrectly.
+
+  - type: textarea
+    attributes:
+      label: Issue explanation
+      description: Provide a short summary of the Minecraft bug you are experiencing.
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Mojira issue link
+      description: Provide a link to the Mojira ticket belonging to this bug.
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Other
+      description: Add any other context or screenshots about the bugfix request below.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        Before submitting this bugfix request, please search our issue tracker to ensure your fix has not
+        already been requested.

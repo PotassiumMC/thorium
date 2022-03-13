@@ -1,0 +1,44 @@
+name: Bug
+description: Report a bug in thorium itself.
+labels: [ "status: awaiting triage", "type: bug" ]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to fill out an issue for thorium! Before making an issue, please check if one exists already.
+        Please keep in mind this form is for reporting issues with thorium/thorium fixes themselves, not for requesting a new Minecraft bugfix.
+        For those types of issues, use the "Bugfix Request" issue form.
+
+  - type: textarea
+    attributes:
+      label: Expected behavior
+      description: What you expected to see.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Observed/Actual behavior
+      description: What you actually saw.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps/models to reproduce
+      description: This may include a build schematic, a video, or detailed instructions to help reconstruct the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Other
+      description: Add any other context or screenshots about the issue below.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        Before submitting this issue, please search our issue tracker to ensure your issue has not
+        already been reported.

@@ -13,7 +13,7 @@ thorium is a fabric mod that fixes 50+ small bugs and annoyances in Minecraft, w
 Because thorium does not affect gameplay mechanics, it is not a hard requirement to have installed on the client or the server when joining a server.
 However, we still recommend installing it on both, since not all issues can be fixed on the server (or client) side.
 
-If you have encountered an issue or would like to request a bugfix, please create an issue on our [issue tracker](https://github.com/PotassiumMC/thorium/issues/new/choose).
+If you have encountered an issue or would like to request a fix for a Minecraft bug, please create an issue on our [issue tracker](https://github.com/PotassiumMC/thorium/issues/new/choose).
 
 For support, check out our [Discord](https://discord.gg/bXG8H6PVuS) or [IRC Channels](https://webchat.esper.net/?channels=potassium)!
 
