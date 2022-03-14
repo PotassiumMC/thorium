@@ -72,3 +72,4 @@ For support, check out our [Discord](https://discord.gg/bXG8H6PVuS) or [IRC Chan
 | [MC-246257](https://bugs.mojang.com/browse/MC-246257) | The horns of some entities aren't mirrored | 
 | [MC-246258](https://bugs.mojang.com/browse/MC-246258) | Hoglins' and zoglins' tusks aren't mirrored |
 | [MC-248191](https://bugs.mojang.com/browse/MC-248191) | Vindicators' arms are misaligned when celebrating |
+| [MC-249054](https://bugs.mojang.com/browse/MC-249054) | Closing inventory by clicking outside of GUI doesn't close inventory properly |
