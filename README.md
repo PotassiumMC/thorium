@@ -49,6 +49,7 @@ For support, check out our [Discord](https://discord.gg/bXG8H6PVuS) or [IRC Chan
 | [MC-148993](https://bugs.mojang.com/browse/MC-148993) | While spectating a player, chunks cannot be loaded |
 | [MC-151412](https://bugs.mojang.com/browse/MC-151412) | "Edit Server Info" window does not focus "Server Name" text field automatically |
 | [MC-159283](https://bugs.mojang.com/browse/MC-159283) | The End terrain does not generate in multiple rings centered around the world center |
+| [MC-165595](https://bugs.mojang.com/browse/MC-165595) | Guardian beam does not render when over a certain "Time" in level.dat |
 | [MC-168016](https://bugs.mojang.com/browse/MC-168016) | The sounds of pages in books rustling aren't controlled by any sound sliders |
 | [MC-170462](https://bugs.mojang.com/browse/MC-170462) | Bad Omen is considered a positive effect in potion item tooltips |
 | [MC-175622](https://bugs.mojang.com/browse/MC-175622) | Wolf's tail will spin 360 degrees if max health is increased |

@@ -36,6 +36,7 @@
     "client.FishingBobberEntityRendererMixin",
     "client.GameRendererMixin",
     "client.GoatEntityModelMixin",
+    "client.GuardianEntityRendererMixin",
     "client.HandledScreenMixin",
     "client.HeldItemRendererMixin",
     "client.HoglinEntityModelMixin",
