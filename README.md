@@ -67,6 +67,7 @@ For support, check out our [Discord](https://discord.gg/bXG8H6PVuS) or [IRC Chan
 | [MC-225364](https://bugs.mojang.com/browse/MC-225364) | Chorus flowers can be shot in adventure |
 | [MC-227337](https://bugs.mojang.com/browse/MC-227337) | When a shulker bullet hits an entity, the explodes sound is not played and particles are not produced |
 | [MC-230603](https://bugs.mojang.com/browse/MC-230603) | Wolf ears and legs aren't mirrored |
+| [MC-233042](https://bugs.mojang.com/browse/MC-233042) | Server Address field isn't focused when Direct Connection menu is opened |
 | [MC-237843](https://bugs.mojang.com/browse/MC-237843) | Players can be idle kicked whilst viewing the end credits |
 | [MC-244694](https://bugs.mojang.com/browse/MC-244694) | The sounds of goats stomping and ramming aren't controlled by the "Friendly Creatures" sound slider |
 | [MC-244948](https://bugs.mojang.com/browse/MC-244948) | The minecraft:item.bundle.remove_one sound plays even when no items are unpacked from bundles |

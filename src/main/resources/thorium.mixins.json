@@ -33,6 +33,7 @@
     "client.ClientPlayerEntityInvoker",
     "client.ClientPlayerEntityMixin",
     "client.ClientPlayNetworkHandlerMixin",
+    "client.DirectConnectScreenMixin",
     "client.FishingBobberEntityRendererMixin",
     "client.GameRendererMixin",
     "client.GoatEntityModelMixin",
