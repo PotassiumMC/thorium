@@ -6,11 +6,11 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-@Mixin(GuardianEntityRenderer.class)
+@Mixin(value = GuardianEntityRenderer.class, priority = 900) // Lower priority to prevent conflicts with other mods
 public class GuardianEntityRendererMixin {
 
     // Fix MC-165595
-    @Redirect(method= "render(Lnet/minecraft/entity/mob/GuardianEntity;FFLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V",at=@At(value="INVOKE", target="Lnet/minecraft/world/World;getTime()J"))
+    @Redirect(method = "render(Lnet/minecraft/entity/mob/GuardianEntity;FFLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;getTime()J"))
     public long getTimeOfDay(World instance) {
         return instance.getTimeOfDay();
     }
