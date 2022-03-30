@@ -44,6 +44,8 @@
     "client.IllagerEntityModelMixin",
     "client.InGameHudMixin",
     "client.ItemStatsListWidgetMixin",
+    "client.LanguageOptionsScreenMixin$LanguageEntryMixin",
+    "client.LanguageOptionsScreenMixin$LanguageSelectionListWidgetMixin",
     "client.MinecraftClientMixin",
     "client.PageTurnWidgetMixin",
     "client.SquidEntityRendererMixin",

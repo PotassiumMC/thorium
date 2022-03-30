@@ -54,6 +54,7 @@ For support, check out our [Discord](https://discord.gg/bXG8H6PVuS) or [IRC Chan
 | [MC-170462](https://bugs.mojang.com/browse/MC-170462) | Bad Omen is considered a positive effect in potion item tooltips |
 | [MC-175622](https://bugs.mojang.com/browse/MC-175622) | Wolf's tail will spin 360 degrees if max health is increased |
 | [MC-181412](https://bugs.mojang.com/browse/MC-181412) | Removing a jukebox with a command while its playing a music disc, then the music will continue playing |
+| [MC-184029](https://bugs.mojang.com/browse/MC-184029) | Clicking into the language list does not remove focus from the focused button |
 | [MC-187539](https://bugs.mojang.com/browse/MC-187539) | "tick" function tag runs before "load" instead of the other way around |
 | [MC-193343](https://bugs.mojang.com/browse/MC-193343) | Soul speed effect remains after switching to spectator mode |
 | [MC-195732](https://bugs.mojang.com/browse/MC-195732) | Going through Nether/End Portal while eating food or item causes two food items to be consumed in total |
