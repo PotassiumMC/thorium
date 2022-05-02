@@ -17,6 +17,7 @@
     "server.PlayerManagerMixin",
     "server.RaidMixin",
     "server.RamImpactTaskMixin",
+    "server.RconCommandOutputMixin",
     "server.ServerPlayerEntityMixin",
     "server.ServerPlayNetworkHandlerMixin",
     "server.ShulkerBulletEntityMixin",

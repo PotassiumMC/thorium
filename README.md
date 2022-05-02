@@ -27,6 +27,7 @@ or [IRC Channels](https://webchat.esper.net/?channels=potassium)!
 |-------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
 | [MC-4490](https://bugs.mojang.com/browse/MC-4490)     | Fishing line not attached to fishing rod in third person while crouching                                    |
 | [MC-6431](https://bugs.mojang.com/browse/MC-6431)     | Status effects are lost when returning to the overworld from the exit end portal                            |
+| [MC-7569](https://bugs.mojang.com/browse/MC-7569)     | RCON output has newlines removed                                                                            |
 | [MC-12062](https://bugs.mojang.com/browse/MC-12062)   | Hotbar selection resets to the far left when exiting the end                                                |
 | [MC-35361](https://bugs.mojang.com/browse/MC-35361)   | Inventory opening is detected while in Nether Portal                                                        |
 | [MC-46503](https://bugs.mojang.com/browse/MC-46503)   | You can retain a mob's shader in spectator mode by running /kill                                            |
