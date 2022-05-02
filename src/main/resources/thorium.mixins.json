@@ -18,6 +18,7 @@
     "server.RaidMixin",
     "server.RamImpactTaskMixin",
     "server.RconCommandOutputMixin",
+    "server.RespawnAnchorBlockMixin",
     "server.ServerPlayerEntityMixin",
     "server.ServerPlayNetworkHandlerMixin",
     "server.ShulkerBulletEntityMixin",

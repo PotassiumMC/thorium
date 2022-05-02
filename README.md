@@ -57,6 +57,7 @@ or [IRC Channels](https://webchat.esper.net/?channels=potassium)!
 | [MC-168016](https://bugs.mojang.com/browse/MC-168016) | The sounds of pages in books rustling aren't controlled by any sound sliders                                |
 | [MC-170462](https://bugs.mojang.com/browse/MC-170462) | Bad Omen is considered a positive effect in potion item tooltips                                            |
 | [MC-175622](https://bugs.mojang.com/browse/MC-175622) | Wolf's tail will spin 360 degrees if max health is increased                                                |
+| [MC-176806](https://bugs.mojang.com/browse/MC-176806) | Scoreboard criteria for using glowstone doesn't increase score when charging a respawn anchor               |
 | [MC-181412](https://bugs.mojang.com/browse/MC-181412) | Removing a jukebox with a command while its playing a music disc, then the music will continue playing      |
 | [MC-184029](https://bugs.mojang.com/browse/MC-184029) | Clicking into the language list does not remove focus from the focused button                               |
 | [MC-193343](https://bugs.mojang.com/browse/MC-193343) | Soul speed effect remains after switching to spectator mode                                                 |
