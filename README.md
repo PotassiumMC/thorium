@@ -70,13 +70,10 @@ or [IRC Channels](https://webchat.esper.net/?channels=potassium)!
 | [MC-215531](https://bugs.mojang.com/browse/MC-215531) | The carved pumpkin overlay isn't removed when switching into spectator mode                                 |
 | [MC-225364](https://bugs.mojang.com/browse/MC-225364) | Chorus flowers can be shot in adventure                                                                     |
 | [MC-227337](https://bugs.mojang.com/browse/MC-227337) | When a shulker bullet hits an entity, the explodes sound is not played and particles are not produced       |
-| [MC-230603](https://bugs.mojang.com/browse/MC-230603) | Wolf ears and legs aren't mirrored                                                                          |
 | [MC-233042](https://bugs.mojang.com/browse/MC-233042) | Server Address field isn't focused when Direct Connection menu is opened                                    |
 | [MC-237843](https://bugs.mojang.com/browse/MC-237843) | Players can be idle kicked whilst viewing the end credits                                                   |
 | [MC-244694](https://bugs.mojang.com/browse/MC-244694) | The sounds of goats stomping and ramming aren't controlled by the "Friendly Creatures" sound slider         |
 | [MC-244948](https://bugs.mojang.com/browse/MC-244948) | The minecraft:item.bundle.remove_one sound plays even when no items are unpacked from bundles               |
 | [MC-245394](https://bugs.mojang.com/browse/MC-245394) | The sounds of raid horns blaring aren't controlled by the correct sound slider                              |
-| [MC-246257](https://bugs.mojang.com/browse/MC-246257) | The horns of some entities aren't mirrored                                                                  | 
-| [MC-246258](https://bugs.mojang.com/browse/MC-246258) | Hoglins' and zoglins' tusks aren't mirrored                                                                 |
 | [MC-248191](https://bugs.mojang.com/browse/MC-248191) | Vindicators' arms are misaligned when celebrating                                                           |
 | [MC-249054](https://bugs.mojang.com/browse/MC-249054) | Closing inventory by clicking outside of GUI doesn't close inventory properly                               |

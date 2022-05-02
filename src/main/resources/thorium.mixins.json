@@ -29,18 +29,15 @@
     "client.AddServerScreenMixin",
     "client.BookEditScreenMixin",
     "client.BookScreenMixin",
-    "client.CowEntityModelMixin",
     "client.ClientPlayerEntityInvoker",
     "client.ClientPlayerEntityMixin",
     "client.ClientPlayNetworkHandlerMixin",
     "client.DirectConnectScreenMixin",
     "client.FishingBobberEntityRendererMixin",
     "client.GameRendererMixin",
-    "client.GoatEntityModelMixin",
     "client.GuardianEntityRendererMixin",
     "client.HandledScreenMixin",
     "client.HeldItemRendererMixin",
-    "client.HoglinEntityModelMixin",
     "client.IllagerEntityModelMixin",
     "client.InGameHudMixin",
     "client.InterpolationMixin",
@@ -50,7 +47,6 @@
     "client.MinecraftClientMixin",
     "client.PageTurnWidgetMixin",
     "client.SquidEntityRendererMixin",
-    "client.TextFieldWidgetMixin",
-    "client.WolfEntityModelMixin"
+    "client.TextFieldWidgetMixin"
   ]
 }
