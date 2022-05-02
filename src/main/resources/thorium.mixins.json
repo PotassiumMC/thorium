@@ -42,6 +42,7 @@
     "client.HoglinEntityModelMixin",
     "client.IllagerEntityModelMixin",
     "client.InGameHudMixin",
+    "client.InterpolationMixin",
     "client.ItemStatsListWidgetMixin",
     "client.LanguageOptionsScreenMixin$LanguageEntryMixin",
     "client.LanguageOptionsScreenMixin$LanguageSelectionListWidgetMixin",
