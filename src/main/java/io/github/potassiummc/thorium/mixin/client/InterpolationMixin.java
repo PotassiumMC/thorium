@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
-@Mixin(targets = "net.minecraft.client.texture.Sprite$Interpolation")
+@Mixin(targets = "net.minecraft.client.texture.Sprite$Interpolation", priority = 1100)
 public abstract class InterpolationMixin {
 
     @Shadow

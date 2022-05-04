@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-@Mixin(value = GuardianEntityRenderer.class, priority = 900) // Lower priority to prevent conflicts with other mods
+@Mixin(value = GuardianEntityRenderer.class, priority = 900)
 public class GuardianEntityRendererMixin {
 
     // Fix MC-165595
