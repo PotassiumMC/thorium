@@ -47,6 +47,7 @@
     "client.LanguageOptionsScreenMixin$LanguageSelectionListWidgetMixin",
     "client.MinecraftClientMixin",
     "client.PageTurnWidgetMixin",
+    "client.SliderWidgetMixin",
     "client.SquidEntityRendererMixin",
     "client.TextFieldWidgetMixin"
   ]
