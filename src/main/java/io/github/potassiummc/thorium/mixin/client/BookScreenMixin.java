@@ -13,19 +13,19 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(BookScreen.class)
 public abstract class BookScreenMixin extends Screen {
 
-	protected BookScreenMixin(Text title) {
-		super(title);
-	}
+    protected BookScreenMixin(Text title) {
+        super(title);
+    }
 
-	// Fix MC-75721
-	// Based on code analysis by Tobi14601: https://bugs.mojang.com/browse/MC-75721?focusedCommentId=920466#comment-920466
-	@Redirect(method = "render(Lnet/minecraft/client/util/math/MatrixStack;IIF)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/screen/Screen;render(Lnet/minecraft/client/util/math/MatrixStack;IIF)V"))
-	private void renderSuperAfterHover(Screen instance, MatrixStack matrices, int mouseX, int mouseY, float delta) {
-	}
+    // Fix MC-75721
+    // Based on code analysis by Tobi14601: https://bugs.mojang.com/browse/MC-75721?focusedCommentId=920466#comment-920466
+    @Redirect(method = "render(Lnet/minecraft/client/util/math/MatrixStack;IIF)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/screen/Screen;render(Lnet/minecraft/client/util/math/MatrixStack;IIF)V"))
+    private void renderSuperAfterHover(Screen instance, MatrixStack matrices, int mouseX, int mouseY, float delta) {
+    }
 
-	@Inject(method = "render(Lnet/minecraft/client/util/math/MatrixStack;IIF)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/screen/ingame/BookScreen;getTextStyleAt(DD)Lnet/minecraft/text/Style;", shift = At.Shift.BEFORE))
-	private void renderSuperBeforeHover(MatrixStack matrices, int mouseX, int mouseY, float delta, CallbackInfo ci) {
-		super.render(matrices, mouseX, mouseY, delta);
-	}
+    @Inject(method = "render(Lnet/minecraft/client/util/math/MatrixStack;IIF)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/screen/ingame/BookScreen;getTextStyleAt(DD)Lnet/minecraft/text/Style;", shift = At.Shift.BEFORE))
+    private void renderSuperBeforeHover(MatrixStack matrices, int mouseX, int mouseY, float delta, CallbackInfo ci) {
+        super.render(matrices, mouseX, mouseY, delta);
+    }
 
 }

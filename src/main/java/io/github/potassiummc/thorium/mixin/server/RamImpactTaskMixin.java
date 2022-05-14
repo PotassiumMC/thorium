@@ -9,10 +9,10 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 @Mixin(RamImpactTask.class)
 public class RamImpactTaskMixin {
 
-	// Fix MC-244694
-	@ModifyArg(method = "keepRunning(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/entity/mob/PathAwareEntity;J)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/world/ServerWorld;playSoundFromEntity(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/entity/Entity;Lnet/minecraft/sound/SoundEvent;Lnet/minecraft/sound/SoundCategory;FF)V"), index = 3)
-	private SoundCategory playRaidHornMakeSoundPacket(SoundCategory sound) {
-		return SoundCategory.NEUTRAL;
-	}
+    // Fix MC-244694
+    @ModifyArg(method = "keepRunning(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/entity/mob/PathAwareEntity;J)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/world/ServerWorld;playSoundFromEntity(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/entity/Entity;Lnet/minecraft/sound/SoundEvent;Lnet/minecraft/sound/SoundCategory;FF)V"), index = 3)
+    private SoundCategory playRaidHornMakeSoundPacket(SoundCategory sound) {
+        return SoundCategory.NEUTRAL;
+    }
 
 }

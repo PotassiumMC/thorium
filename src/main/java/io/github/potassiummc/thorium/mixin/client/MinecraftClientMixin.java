@@ -12,22 +12,22 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(MinecraftClient.class)
 public class MinecraftClientMixin {
 
-	// Fix MC-35361
-	@Redirect(method = "handleInputEvents()V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/tutorial/TutorialManager;onInventoryOpened()V"))
-	private void handleInputEventsOnInventoryOpened(TutorialManager instance) {
-		ClientPlayerEntity me = ((MinecraftClient) (Object) this).player;
-		// Don't call the 'event' if we're in a nether portal.
-		if (((EntityAccessor) me).inNetherPortal()) return;
+    // Fix MC-35361
+    @Redirect(method = "handleInputEvents()V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/tutorial/TutorialManager;onInventoryOpened()V"))
+    private void handleInputEventsOnInventoryOpened(TutorialManager instance) {
+        ClientPlayerEntity me = ((MinecraftClient) (Object) this).player;
+        // Don't call the 'event' if we're in a nether portal.
+        if (((EntityAccessor) me).inNetherPortal()) return;
 
-		instance.onInventoryOpened();
-	}
+        instance.onInventoryOpened();
+    }
 
-	// Fix MC-46766
-	@Redirect(method = "handleBlockBreaking(Z)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/BlockState;isAir()Z"))
-	private boolean handleBlockBreakingIsAirOrSpectator(BlockState instance) {
-		ClientPlayerEntity me = ((MinecraftClient) (Object) this).player;
-		// Pretend the block is air if we're a spectator.
-		return instance.isAir() || me.isSpectator();
-	}
+    // Fix MC-46766
+    @Redirect(method = "handleBlockBreaking(Z)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/BlockState;isAir()Z"))
+    private boolean handleBlockBreakingIsAirOrSpectator(BlockState instance) {
+        ClientPlayerEntity me = ((MinecraftClient) (Object) this).player;
+        // Pretend the block is air if we're a spectator.
+        return instance.isAir() || me.isSpectator();
+    }
 
 }

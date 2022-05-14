@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 @Mixin(ClientPlayerEntity.class)
 public interface ClientPlayerEntityInvoker {
 
-	@Invoker("isCamera")
-	boolean invokeIsCamera();
+    @Invoker("isCamera")
+    boolean invokeIsCamera();
 
 }

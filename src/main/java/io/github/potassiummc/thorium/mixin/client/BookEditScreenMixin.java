@@ -16,30 +16,30 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(BookEditScreen.class)
 public abstract class BookEditScreenMixin {
 
-	@Final
-	@Mutable
-	@Shadow
-	private SelectionManager bookTitleSelectionManager;
+    @Final
+    @Mutable
+    @Shadow
+    private SelectionManager bookTitleSelectionManager;
 
-	@Shadow
-	private String title;
+    @Shadow
+    private String title;
 
-	@Shadow
-	protected abstract String getClipboard();
+    @Shadow
+    protected abstract String getClipboard();
 
-	@Shadow
-	protected abstract void setClipboard(String clipboard);
+    @Shadow
+    protected abstract void setClipboard(String clipboard);
 
-	// Fix MC-210318
-	@Inject(method = "<init>", at = @At(value = "TAIL"))
-	private void modifyBookTitleSelectionManager(PlayerEntity player, ItemStack itemStack, Hand hand, CallbackInfo ci) {
-		this.bookTitleSelectionManager = new SelectionManager(() -> {
-			return this.title;
-		}, (title) -> {
-			this.title = title;
-		}, this::getClipboard, this::setClipboard, (string) -> {
-			return string.length() <= 16;
-		});
-	}
+    // Fix MC-210318
+    @Inject(method = "<init>", at = @At(value = "TAIL"))
+    private void modifyBookTitleSelectionManager(PlayerEntity player, ItemStack itemStack, Hand hand, CallbackInfo ci) {
+        this.bookTitleSelectionManager = new SelectionManager(() -> {
+            return this.title;
+        }, (title) -> {
+            this.title = title;
+        }, this::getClipboard, this::setClipboard, (string) -> {
+            return string.length() <= 16;
+        });
+    }
 
 }

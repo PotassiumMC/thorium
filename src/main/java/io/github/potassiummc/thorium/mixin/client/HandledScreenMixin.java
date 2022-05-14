@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public class HandledScreenMixin {
 
     // Fix MC-249054
-    @Redirect(method= "mouseClicked(DDI)Z",at=@At(value="INVOKE", target="Lnet/minecraft/client/MinecraftClient;setScreen(Lnet/minecraft/client/gui/screen/Screen;)V"))
+    @Redirect(method = "mouseClicked(DDI)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;setScreen(Lnet/minecraft/client/gui/screen/Screen;)V"))
     public void properlyCloseHandledScreen(MinecraftClient instance, Screen screen) {
         ((HandledScreen<?>) (Object) this).close();
     }

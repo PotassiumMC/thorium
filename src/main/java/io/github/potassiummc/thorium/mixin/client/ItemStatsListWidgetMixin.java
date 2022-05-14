@@ -12,12 +12,12 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(net.minecraft.client.gui.screen.StatsScreen.ItemStatsListWidget.class)
 public class ItemStatsListWidgetMixin extends AlwaysSelectedEntryListWidget<StatsScreen.ItemStatsListWidget.Entry> {
 
+    @Shadow
+    protected int selectedHeaderColumn;
+
     public ItemStatsListWidgetMixin(MinecraftClient minecraftClient, int i, int j, int k, int l, int m) {
         super(minecraftClient, i, j, k, l, m);
     }
-
-    @Shadow
-    protected int selectedHeaderColumn;
 
     // Fix MC-201723
     // Based on code analysis by ISRosillo14: https://bugs.mojang.com/browse/MC-201723

@@ -14,12 +14,12 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 @Mixin(targets = "net.minecraft.client.texture.Sprite$Interpolation", priority = 1100)
 public abstract class InterpolationMixin {
 
-    @Shadow
-    protected abstract int lerp(double delta, int to, int from);
-
     @Final
     @Shadow
     private NativeImage[] images;
+
+    @Shadow
+    protected abstract int lerp(double delta, int to, int from);
 
     // Fix MC-144761
     // Based on code analysis by gudenau: https://bugs.mojang.com/browse/MC-144761?focusedCommentId=780425#comment-780425

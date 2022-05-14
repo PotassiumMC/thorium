@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 @Mixin(Entity.class)
 public interface EntityAccessor {
 
-	@Accessor("inNetherPortal")
-	boolean inNetherPortal();
+    @Accessor("inNetherPortal")
+    boolean inNetherPortal();
 
 }

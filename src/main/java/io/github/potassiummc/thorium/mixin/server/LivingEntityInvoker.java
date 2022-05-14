@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 @Mixin(LivingEntity.class)
 public interface LivingEntityInvoker {
 
-	@Invoker("removeSoulSpeedBoost")
-	void invokeRemoveSoulSpeedBoost();
+    @Invoker("removeSoulSpeedBoost")
+    void invokeRemoveSoulSpeedBoost();
 
 }

@@ -6,11 +6,11 @@ import org.slf4j.LoggerFactory;
 
 public class Thorium implements ModInitializer {
 
-	public static final Logger LOGGER = LoggerFactory.getLogger("thorium");
+    public static final Logger LOGGER = LoggerFactory.getLogger("thorium");
 
-	@Override
-	public void onInitialize() {
+    @Override
+    public void onInitialize() {
 
-	}
+    }
 
 }

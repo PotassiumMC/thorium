@@ -11,15 +11,15 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(AddServerScreen.class)
 public class AddServerScreenMixin {
 
-	@Shadow
-	private TextFieldWidget serverNameField;
+    @Shadow
+    private TextFieldWidget serverNameField;
 
-	// Fix MC-151412
-	// Based on code analysis by null: https://bugs.mojang.com/browse/MC-151412?focusedCommentId=1029727#comment-1029727
-	@Inject(method = "init()V", at = @At("TAIL"))
-	private void initSetFocus(CallbackInfo ci) {
-		this.serverNameField.setTextFieldFocused(false);
-		((AddServerScreen) (Object) this).setInitialFocus(this.serverNameField);
-	}
+    // Fix MC-151412
+    // Based on code analysis by null: https://bugs.mojang.com/browse/MC-151412?focusedCommentId=1029727#comment-1029727
+    @Inject(method = "init()V", at = @At("TAIL"))
+    private void initSetFocus(CallbackInfo ci) {
+        this.serverNameField.setTextFieldFocused(false);
+        ((AddServerScreen) (Object) this).setInitialFocus(this.serverNameField);
+    }
 
 }

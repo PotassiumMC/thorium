@@ -11,13 +11,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(TextFieldWidget.class)
 public class TextFieldWidgetMixin {
 
-	@Shadow
-	private boolean selecting;
+    @Shadow
+    private boolean selecting;
 
-	// Fix MC-147766
-	@Inject(method = "setCursor(I)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/widget/TextFieldWidget;setSelectionStart(I)V", shift = At.Shift.AFTER))
-	private void setCursorSetSelectionEnd(int cursor, CallbackInfo ci) {
-		this.selecting = Screen.hasShiftDown();
-	}
+    // Fix MC-147766
+    @Inject(method = "setCursor(I)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/widget/TextFieldWidget;setSelectionStart(I)V", shift = At.Shift.AFTER))
+    private void setCursorSetSelectionEnd(int cursor, CallbackInfo ci) {
+        this.selecting = Screen.hasShiftDown();
+    }
 
 }

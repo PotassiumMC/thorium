@@ -12,14 +12,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(JukeboxBlock.class)
 public class JukeboxBlockMixin {
 
-	// Fix MC-181412
-	@Redirect(method = "removeRecord(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;syncWorldEvent(ILnet/minecraft/util/math/BlockPos;I)V"))
-	private void cancelLateWorldEvent(World instance, int i, BlockPos blockPos, int j) {
-	}
+    // Fix MC-181412
+    @Redirect(method = "removeRecord(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;syncWorldEvent(ILnet/minecraft/util/math/BlockPos;I)V"))
+    private void cancelLateWorldEvent(World instance, int i, BlockPos blockPos, int j) {
+    }
 
-	@Inject(method = "removeRecord(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/entity/JukeboxBlockEntity;getRecord()Lnet/minecraft/item/ItemStack;", shift = At.Shift.BEFORE))
-	private void callWorldEventEarlier(World world, BlockPos pos, CallbackInfo ci) {
-		world.syncWorldEvent(1010, pos, 0);
-	}
+    @Inject(method = "removeRecord(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/entity/JukeboxBlockEntity;getRecord()Lnet/minecraft/item/ItemStack;", shift = At.Shift.BEFORE))
+    private void callWorldEventEarlier(World world, BlockPos pos, CallbackInfo ci) {
+        world.syncWorldEvent(1010, pos, 0);
+    }
 
 }

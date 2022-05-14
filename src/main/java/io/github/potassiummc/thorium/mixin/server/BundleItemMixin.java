@@ -18,21 +18,21 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(BundleItem.class)
 public abstract class BundleItemMixin {
 
-	@Shadow
-	protected abstract void playRemoveOneSound(Entity entity);
+    @Shadow
+    protected abstract void playRemoveOneSound(Entity entity);
 
-	// Fix MC-244948
-	@Redirect(method = "onStackClicked(Lnet/minecraft/item/ItemStack;Lnet/minecraft/screen/slot/Slot;Lnet/minecraft/util/ClickType;Lnet/minecraft/entity/player/PlayerEntity;)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/BundleItem;playRemoveOneSound(Lnet/minecraft/entity/Entity;)V"))
-	private void voidOriginalClickSound(BundleItem instance, Entity entity) {
-	}
+    // Fix MC-244948
+    @Redirect(method = "onStackClicked(Lnet/minecraft/item/ItemStack;Lnet/minecraft/screen/slot/Slot;Lnet/minecraft/util/ClickType;Lnet/minecraft/entity/player/PlayerEntity;)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/BundleItem;playRemoveOneSound(Lnet/minecraft/entity/Entity;)V"))
+    private void voidOriginalClickSound(BundleItem instance, Entity entity) {
+    }
 
-	@Inject(method = "onStackClicked(Lnet/minecraft/item/ItemStack;Lnet/minecraft/screen/slot/Slot;Lnet/minecraft/util/ClickType;Lnet/minecraft/entity/player/PlayerEntity;)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/BundleItem;playRemoveOneSound(Lnet/minecraft/entity/Entity;)V"))
-	private void onlyPlayClickSoundIfBundleHasItems(ItemStack bundle, Slot slot, ClickType clickType, PlayerEntity player, CallbackInfoReturnable<Boolean> cir) {
-		NbtCompound nbtCompound = bundle.getOrCreateNbt();
-		if (!(nbtCompound.get("Items") instanceof NbtList items)) return;
-		if (items.isEmpty()) return;
+    @Inject(method = "onStackClicked(Lnet/minecraft/item/ItemStack;Lnet/minecraft/screen/slot/Slot;Lnet/minecraft/util/ClickType;Lnet/minecraft/entity/player/PlayerEntity;)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/BundleItem;playRemoveOneSound(Lnet/minecraft/entity/Entity;)V"))
+    private void onlyPlayClickSoundIfBundleHasItems(ItemStack bundle, Slot slot, ClickType clickType, PlayerEntity player, CallbackInfoReturnable<Boolean> cir) {
+        NbtCompound nbtCompound = bundle.getOrCreateNbt();
+        if (!(nbtCompound.get("Items") instanceof NbtList items)) return;
+        if (items.isEmpty()) return;
 
-		playRemoveOneSound(player);
-	}
+        playRemoveOneSound(player);
+    }
 
 }
