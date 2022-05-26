@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.server;
+package io.github.potassiummc.thorium.mixin.server.mc181412;
 
 import net.minecraft.block.JukeboxBlock;
 import net.minecraft.util.math.BlockPos;
@@ -12,7 +12,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(JukeboxBlock.class)
 public class JukeboxBlockMixin {
 
-    // Fix MC-181412
     @Redirect(method = "removeRecord(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;syncWorldEvent(ILnet/minecraft/util/math/BlockPos;I)V"))
     private void cancelLateWorldEvent(World instance, int i, BlockPos blockPos, int j) {
     }

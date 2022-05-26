@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.server;
+package io.github.potassiummc.thorium.mixin.server.mc7569;
 
 import net.minecraft.server.rcon.RconCommandOutput;
 import net.minecraft.text.Text;
@@ -18,7 +18,6 @@ public class RconCommandOutputMixin {
     @Shadow
     private StringBuffer buffer;
 
-    // Fix MC-7569
     @Inject(method = "sendSystemMessage(Lnet/minecraft/text/Text;Ljava/util/UUID;)V", at = @At(value = "INVOKE", target = "Ljava/lang/StringBuffer;append(Ljava/lang/String;)Ljava/lang/StringBuffer;", shift = At.Shift.AFTER))
     public void sendNewlineAfterMessage(Text message, UUID sender, CallbackInfo ci) {
         this.buffer.append("\n");

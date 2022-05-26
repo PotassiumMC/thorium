@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.server;
+package io.github.potassiummc.thorium.mixin.server.mc123605;
 
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.GameRules;
@@ -10,7 +10,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(MinecraftServer.class)
 public class MinecraftServerMixin {
 
-    // Fix MC-123605
     @Redirect(method = "setToDebugWorldProperties(Lnet/minecraft/world/SaveProperties;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/ServerWorldProperties;setClearWeatherTime(I)V"))
     private void setDebugWorldPropertiesSetGamerule(ServerWorldProperties instance, int i) {
         instance.getGameRules().get(GameRules.DO_WEATHER_CYCLE).set(false, (MinecraftServer) (Object) this);

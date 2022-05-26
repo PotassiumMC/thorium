@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.client;
+package io.github.potassiummc.thorium.mixin.client.mc46766;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.client.MinecraftClient;

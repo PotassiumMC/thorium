@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.client;
+package io.github.potassiummc.thorium.mixin.client.mc115092;
 
 import net.minecraft.client.render.entity.SquidEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
@@ -12,7 +12,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(SquidEntityRenderer.class)
 public class SquidEntityRendererMixin<T extends SquidEntity> {
 
-    // Fix MC-115092
     // Based on code analysis by OMGItzAndrew: https://bugs.mojang.com/browse/MC-115092
     @Inject(method = "setupTransforms(Lnet/minecraft/entity/passive/SquidEntity;Lnet/minecraft/client/util/math/MatrixStack;FFF)V", at = @At("TAIL"))
     private void setupTransformsRotate(T squidEntity, MatrixStack matrixStack, float f, float g, float h, CallbackInfo ci) {

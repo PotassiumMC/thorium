@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.client;
+package io.github.potassiummc.thorium.mixin.client.mc145748;
 
 import net.minecraft.client.gui.widget.SliderWidget;
 import org.spongepowered.asm.mixin.Mixin;
@@ -11,7 +11,6 @@ public class SliderWidgetMixin {
 
     private boolean wasOpened = false;
 
-    // Fix MC-145748
     @Inject(method = "onClick(DD)V", at = @At("TAIL"))
     public void onClickSetWasOpened(double mouseX, double mouseY, CallbackInfo ci) {
         wasOpened = true;

@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.client;
+package io.github.potassiummc.thorium.mixin.client.mc151412;
 
 import net.minecraft.client.gui.screen.AddServerScreen;
 import net.minecraft.client.gui.widget.TextFieldWidget;
@@ -14,7 +14,6 @@ public class AddServerScreenMixin {
     @Shadow
     private TextFieldWidget serverNameField;
 
-    // Fix MC-151412
     // Based on code analysis by null: https://bugs.mojang.com/browse/MC-151412?focusedCommentId=1029727#comment-1029727
     @Inject(method = "init()V", at = @At("TAIL"))
     private void initSetFocus(CallbackInfo ci) {

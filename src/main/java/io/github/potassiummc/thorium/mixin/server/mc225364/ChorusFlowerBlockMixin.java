@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.server;
+package io.github.potassiummc.thorium.mixin.server.mc225364;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ChorusFlowerBlock;
@@ -14,7 +14,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(ChorusFlowerBlock.class)
 public class ChorusFlowerBlockMixin {
 
-    // Fix MC-225364
     @Inject(method = "onProjectileHit(Lnet/minecraft/world/World;Lnet/minecraft/block/BlockState;Lnet/minecraft/util/hit/BlockHitResult;Lnet/minecraft/entity/projectile/ProjectileEntity;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;breakBlock(Lnet/minecraft/util/math/BlockPos;ZLnet/minecraft/entity/Entity;)Z", shift = At.Shift.BEFORE), cancellable = true)
     private void onProjectileHitCheckMayBreak(World world, BlockState state, BlockHitResult hit, ProjectileEntity projectile, CallbackInfo ci) {
         if (!(projectile.getOwner() instanceof PlayerEntity player)) return;

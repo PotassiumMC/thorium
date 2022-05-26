@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.client;
+package io.github.potassiummc.thorium.mixin.client.mc75721;
 
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.ingame.BookScreen;
@@ -17,7 +17,6 @@ public abstract class BookScreenMixin extends Screen {
         super(title);
     }
 
-    // Fix MC-75721
     // Based on code analysis by Tobi14601: https://bugs.mojang.com/browse/MC-75721?focusedCommentId=920466#comment-920466
     @Redirect(method = "render(Lnet/minecraft/client/util/math/MatrixStack;IIF)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/screen/Screen;render(Lnet/minecraft/client/util/math/MatrixStack;IIF)V"))
     private void renderSuperAfterHover(Screen instance, MatrixStack matrices, int mouseX, int mouseY, float delta) {

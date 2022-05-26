@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.client;
+package io.github.potassiummc.thorium.mixin.client.mc249054;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
@@ -10,7 +10,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(HandledScreen.class)
 public class HandledScreenMixin {
 
-    // Fix MC-249054
     @Redirect(method = "mouseClicked(DDI)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;setScreen(Lnet/minecraft/client/gui/screen/Screen;)V"))
     public void properlyCloseHandledScreen(MinecraftClient instance, Screen screen) {
         ((HandledScreen<?>) (Object) this).close();

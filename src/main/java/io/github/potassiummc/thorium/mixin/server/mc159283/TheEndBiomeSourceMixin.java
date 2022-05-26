@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.server;
+package io.github.potassiummc.thorium.mixin.server.mc159283;
 
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.noise.SimplexNoiseSampler;
@@ -11,7 +11,6 @@ import org.spongepowered.asm.mixin.injection.Slice;
 @Mixin(TheEndBiomeSource.class)
 public class TheEndBiomeSourceMixin {
 
-    // Fix MC-159283
     @Redirect(method = "getNoiseAt(Lnet/minecraft/util/math/noise/SimplexNoiseSampler;II)F", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/math/MathHelper;sqrt(F)F"), slice = @Slice(to = @At(value = "INVOKE", target = "Lnet/minecraft/util/math/MathHelper;clamp(FFF)F")))
     private static float getNoiseAt(float f, SimplexNoiseSampler simplexNoiseSampler, int i, int j) {
         // Explicitly cast i and j to longs.

@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.client;
+package io.github.potassiummc.thorium.mixin.client.mc215531;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.hud.InGameHud;
@@ -16,7 +16,6 @@ public class InGameHudMixin {
     @Shadow
     private MinecraftClient client;
 
-    // Fix MC-215531
     // Maybe servers somehow rely on this behaviour? If your server (ab)uses this bug, please make a GH issue.
     @Redirect(method = "render(Lnet/minecraft/client/util/math/MatrixStack;F)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/option/Perspective;isFirstPerson()Z"))
     private boolean renderIsFirstPersonOrSpectator(Perspective instance) {

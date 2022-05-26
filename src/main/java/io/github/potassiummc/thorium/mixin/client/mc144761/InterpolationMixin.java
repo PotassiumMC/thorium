@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.client;
+package io.github.potassiummc.thorium.mixin.client.mc144761;
 
 import net.minecraft.client.texture.NativeImage;
 import net.minecraft.client.texture.Sprite;
@@ -21,7 +21,6 @@ public abstract class InterpolationMixin {
     @Shadow
     protected abstract int lerp(double delta, int to, int from);
 
-    // Fix MC-144761
     // Based on code analysis by gudenau: https://bugs.mojang.com/browse/MC-144761?focusedCommentId=780425#comment-780425
     @Redirect(method = "apply(Lnet/minecraft/client/texture/Sprite$Animation;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/texture/NativeImage;setColor(III)V"))
     public void cancelSetColor(NativeImage instance, int x, int y, int color) {

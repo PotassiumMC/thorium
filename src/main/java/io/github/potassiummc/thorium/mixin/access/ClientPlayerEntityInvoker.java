@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.access;
+package io.github.potassiummc.thorium.mixin.access;
 
 import net.minecraft.client.network.ClientPlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;

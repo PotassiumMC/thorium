@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.server;
+package io.github.potassiummc.thorium.mixin.server.mc244948;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -21,7 +21,6 @@ public abstract class BundleItemMixin {
     @Shadow
     protected abstract void playRemoveOneSound(Entity entity);
 
-    // Fix MC-244948
     @Redirect(method = "onStackClicked(Lnet/minecraft/item/ItemStack;Lnet/minecraft/screen/slot/Slot;Lnet/minecraft/util/ClickType;Lnet/minecraft/entity/player/PlayerEntity;)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/BundleItem;playRemoveOneSound(Lnet/minecraft/entity/Entity;)V"))
     private void voidOriginalClickSound(BundleItem instance, Entity entity) {
     }

@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.server;
+package io.github.potassiummc.thorium.mixin.server.mc86252;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.server.network.ServerPlayerEntity;

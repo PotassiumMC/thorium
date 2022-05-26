@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.client;
+package io.github.potassiummc.thorium.mixin.client.mc147766;
 
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.TextFieldWidget;
@@ -14,7 +14,6 @@ public class TextFieldWidgetMixin {
     @Shadow
     private boolean selecting;
 
-    // Fix MC-147766
     @Inject(method = "setCursor(I)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/widget/TextFieldWidget;setSelectionStart(I)V", shift = At.Shift.AFTER))
     private void setCursorSetSelectionEnd(int cursor, CallbackInfo ci) {
         this.selecting = Screen.hasShiftDown();

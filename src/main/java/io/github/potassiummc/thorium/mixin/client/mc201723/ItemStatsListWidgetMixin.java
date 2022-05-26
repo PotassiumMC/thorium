@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.client;
+package io.github.potassiummc.thorium.mixin.client.mc201723;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.Mouse;
@@ -19,7 +19,6 @@ public class ItemStatsListWidgetMixin extends AlwaysSelectedEntryListWidget<Stat
         super(minecraftClient, i, j, k, l, m);
     }
 
-    // Fix MC-201723
     // Based on code analysis by ISRosillo14: https://bugs.mojang.com/browse/MC-201723
     @Redirect(method = "renderHeader(Lnet/minecraft/client/util/math/MatrixStack;IILnet/minecraft/client/render/Tessellator;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Mouse;wasLeftButtonClicked()Z"))
     private boolean renderHeaderWasLeftClicked(Mouse instance) {

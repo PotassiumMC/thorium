@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.client;
+package io.github.potassiummc.thorium.mixin.client.mc210318;
 
 import net.minecraft.client.gui.screen.ingame.BookEditScreen;
 import net.minecraft.client.util.SelectionManager;
@@ -30,16 +30,9 @@ public abstract class BookEditScreenMixin {
     @Shadow
     protected abstract void setClipboard(String clipboard);
 
-    // Fix MC-210318
     @Inject(method = "<init>", at = @At(value = "TAIL"))
     private void modifyBookTitleSelectionManager(PlayerEntity player, ItemStack itemStack, Hand hand, CallbackInfo ci) {
-        this.bookTitleSelectionManager = new SelectionManager(() -> {
-            return this.title;
-        }, (title) -> {
-            this.title = title;
-        }, this::getClipboard, this::setClipboard, (string) -> {
-            return string.length() <= 16;
-        });
+        this.bookTitleSelectionManager = new SelectionManager(() -> this.title, (title) -> this.title = title, this::getClipboard, this::setClipboard, (string) -> string.length() <= 16);
     }
 
 }

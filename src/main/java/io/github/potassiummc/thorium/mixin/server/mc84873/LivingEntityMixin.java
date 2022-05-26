@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.server;
+package io.github.potassiummc.thorium.mixin.server.mc84873;
 
 import net.minecraft.entity.LivingEntity;
 import org.objectweb.asm.Opcodes;
@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(LivingEntity.class)
 public class LivingEntityMixin {
-    
+
     // Maybe servers somehow rely on this behaviour? If your server (ab)uses this bug, please make a GH issue.
     @Redirect(method = "updatePostDeath()V", at = @At(value = "FIELD", target = "Lnet/minecraft/entity/LivingEntity;deathTime:I", opcode = Opcodes.GETFIELD, ordinal = 1))
     private int updatePostDeathGetDeathTime(LivingEntity instance) {

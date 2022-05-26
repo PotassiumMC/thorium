@@ -1,6 +1,6 @@
-package io.github.potassiummc.thorium.mixin.client;
+package io.github.potassiummc.thorium.mixin.client.mc184029;
 
-import io.github.potassiummc.thorium.access.LanguageSelectionListWidgetAccess;
+import io.github.potassiummc.thorium.mixin.access.LanguageSelectionListWidgetAccess;
 import net.minecraft.client.gui.Element;
 import net.minecraft.client.gui.screen.option.LanguageOptionsScreen;
 import org.spongepowered.asm.mixin.Final;
@@ -12,7 +12,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 public class LanguageOptionsScreenMixin {
 
-    // Fix MC-184029
     @Mixin(LanguageOptionsScreen.LanguageSelectionListWidget.class)
     public static class LanguageSelectionListWidgetMixin implements LanguageSelectionListWidgetAccess {
 
