@@ -35,6 +35,7 @@
     "server.mc86252.ServerPlayerEntityMixin"
   ],
   "client": [
+    "access.ClientPlayerEntityInvoker",
     "client.mc115092.SquidEntityRendererMixin",
     "client.mc12062.ClientPlayNetworkHandlerMixin",
     "client.mc127970.HeldItemRendererMixin",
@@ -45,8 +46,8 @@
     "client.mc151412.AddServerScreenMixin",
     "client.mc165595.GuardianEntityRendererMixin",
     "client.mc168016.PageTurnWidgetMixin",
-    "client.mc184029.LanguageOptionsScreenMixin$LanguageEntryMixin",
-    "client.mc184029.LanguageOptionsScreenMixin$LanguageSelectionListWidgetMixin",
+    "client.mc184029.LanguageEntryMixin",
+    "client.mc184029.LanguageSelectionListWidgetMixin",
     "client.mc201723.ItemStatsListWidgetMixin",
     "client.mc210318.BookEditScreenMixin",
     "client.mc215531.InGameHudMixin",

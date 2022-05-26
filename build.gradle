@@ -16,6 +16,12 @@ repositories {
     // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html
     // for more information about repositories.
+
+    maven {
+        name = "stellardriftSnapshots"
+        url = uri("https://repo.stellardrift.ca/repository/snapshots/")
+        mavenContent { snapshotsOnly() }
+    }
 }
 
 dependencies {
@@ -24,7 +30,7 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-    modImplementation include("ca.stellardrift:confabricate:2.1.0")
+    modImplementation include("ca.stellardrift:confabricate:3.0.0-SNAPSHOT")
 }
 
 processResources {
