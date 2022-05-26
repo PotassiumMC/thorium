@@ -36,6 +36,7 @@
   ],
   "client": [
     "access.ClientPlayerEntityInvoker",
+    "client.mc112730.RebuildTaskMixin",
     "client.mc115092.SquidEntityRendererMixin",
     "client.mc12062.ClientPlayNetworkHandlerMixin",
     "client.mc127970.HeldItemRendererMixin",

@@ -39,8 +39,9 @@ or [IRC Channels](https://webchat.esper.net/?channels=potassium)!
 | [MC-81773](https://bugs.mojang.com/browse/MC-81773)   | Bows and tridents drawn in survival/creative/adventure mode can be released in spectator mode                   |
 | [MC-84661](https://bugs.mojang.com/browse/MC-84661)   | Glowing is considered a positive effect in potion item tooltips                                                 |
 | [MC-84873](https://bugs.mojang.com/browse/MC-84873)   | DeathTime values 20+ cause corrupted mobs                                                                       |
-| [MC-86252](https://bugs.moajng.com/browse/MC-86252)   | Shields stay blocking and allow left-clicking under a specific condition                                        |
+| [MC-86252](https://bugs.mojang.com/browse/MC-86252)   | Shields stay blocking and allow left-clicking under a specific condition                                        |
 | [MC-115092](https://bugs.mojang.com/browse/MC-115092) | Squid/glow squid named "Dinnerbone" or "Grumm" is not upside-down                                               |
+| [MC-112730](https://bugs.mojang.com/browse/MC-112730) | Beacon beam and structure block render twice per frame                                                          |
 | [MC-119417](https://bugs.mojang.com/browse/MC-119417) | A spectator can occupy a bed if they enter it and then are switched to spectator mode                           |
 | [MC-123605](https://bugs.mojang.com/browse/MC-123605) | Debug world still sets clear weather time instead of deactivating gamerule doWeatherCycle                       |
 | [MC-123450](https://bugs.mojang.com/browse/MC-123450) | Item frames play sound when item frame item is read from NBT                                                    |
