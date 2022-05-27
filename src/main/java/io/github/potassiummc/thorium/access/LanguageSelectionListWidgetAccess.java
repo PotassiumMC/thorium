@@ -1,4 +1,4 @@
-package io.github.potassiummc.thorium.mixin.access;
+package io.github.potassiummc.thorium.access;
 
 import net.minecraft.client.gui.screen.option.LanguageOptionsScreen;
 

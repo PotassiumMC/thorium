@@ -1,6 +1,6 @@
 package io.github.potassiummc.thorium.mixin.client.mc184029;
 
-import io.github.potassiummc.thorium.mixin.access.LanguageSelectionListWidgetAccess;
+import io.github.potassiummc.thorium.access.LanguageSelectionListWidgetAccess;
 import net.minecraft.client.gui.screen.option.LanguageOptionsScreen;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
