@@ -72,6 +72,7 @@ or [IRC Channels](https://webchat.esper.net/?channels=potassium)!
 | [MC-215530](https://bugs.mojang.com/browse/MC-215530) | The freezing effect isn't immediately removed when switching into spectator mode                                |
 | [MC-215531](https://bugs.mojang.com/browse/MC-215531) | The carved pumpkin overlay isn't removed when switching into spectator mode                                     |
 | [MC-225364](https://bugs.mojang.com/browse/MC-225364) | Chorus flowers can be shot in adventure                                                                         |
+| [MC-227169](https://bugs.mojang.com/browse/MC-227169) | The main hand is broken when you hold a crossbow loaded into the secondary hand                                 |
 | [MC-227337](https://bugs.mojang.com/browse/MC-227337) | When a shulker bullet hits an entity, the explodes sound is not played and particles are not produced           |
 | [MC-233042](https://bugs.mojang.com/browse/MC-233042) | Server Address field isn't focused when Direct Connection menu is opened                                        |
 | [MC-237843](https://bugs.mojang.com/browse/MC-237843) | Players can be idle kicked whilst viewing the end credits                                                       |

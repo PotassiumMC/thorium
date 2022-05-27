@@ -52,6 +52,7 @@
     "client.mc201723.ItemStatsListWidgetMixin",
     "client.mc210318.BookEditScreenMixin",
     "client.mc215531.InGameHudMixin",
+    "client.mc227169.PlayerEntityRendererMixin",
     "client.mc233042.DirectConnectScreenMixin",
     "client.mc248191.IllagerEntityModelMixin",
     "client.mc249054.HandledScreenMixin",
