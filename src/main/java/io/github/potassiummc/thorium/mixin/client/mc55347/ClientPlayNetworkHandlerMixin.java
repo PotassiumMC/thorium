@@ -18,6 +18,7 @@ public class ClientPlayNetworkHandlerMixin {
     @Inject(method = "<init>", at = @At("TAIL"))
     private void onInitResetTitle(MinecraftClient client, Screen screen, ClientConnection connection, GameProfile profile, TelemetrySender telemetrySender, CallbackInfo ci) {
         client.inGameHud.clearTitle();
+        client.inGameHud.setDefaultTitleFade();
     }
 
 }
