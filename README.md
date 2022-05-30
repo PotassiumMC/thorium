@@ -79,5 +79,4 @@ or [IRC Channels](https://webchat.esper.net/?channels=potassium)!
 | [MC-244694](https://bugs.mojang.com/browse/MC-244694) | The sounds of goats stomping and ramming aren't controlled by the "Friendly Creatures" sound slider             |
 | [MC-244948](https://bugs.mojang.com/browse/MC-244948) | The minecraft:item.bundle.remove_one sound plays even when no items are unpacked from bundles                   |
 | [MC-245394](https://bugs.mojang.com/browse/MC-245394) | The sounds of raid horns blaring aren't controlled by the correct sound slider                                  |
-| [MC-248191](https://bugs.mojang.com/browse/MC-248191) | Vindicators' arms are misaligned when celebrating                                                               |
 | [MC-249054](https://bugs.mojang.com/browse/MC-249054) | Closing inventory by clicking outside of GUI doesn't close inventory properly                                   |
