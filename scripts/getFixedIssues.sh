@@ -1,6 +1,6 @@
 #!/bin/bash
 
-README_PATH="${BASH_SOURCE%/*}/../README.md"
+README_PATH="${BASH_SOURCE%/*}/../FIXED_ISSUES.md"
 MOJIRA_ISSUE_REGEX="\\[MC-[0-9]*\\]"
 MOJIRA_ENDPOINT="https://bugs.mojang.com/"
 ISSUE_DELAY=0.25
