@@ -11,7 +11,7 @@
     "server.mc123450.ItemFrameEntityMixin",
     "server.mc123605.MinecraftServerMixin",
     "server.mc139041.FishingRodItemMixin",
-    "server.mc159283.TheEndBiomeSourceMixin",
+    "server.mc159283.EndIslandsMixin",
     "server.mc170462.StatusEffectsMixin",
     "server.mc175622.WolfEntityMixin",
     "server.mc176806.RespawnAnchorBlockMixin",

@@ -15,7 +15,7 @@ public class SquidEntityRendererMixin<T extends SquidEntity> {
     // Based on code analysis by OMGItzAndrew: https://bugs.mojang.com/browse/MC-115092
     @Inject(method = "setupTransforms(Lnet/minecraft/entity/passive/SquidEntity;Lnet/minecraft/client/util/math/MatrixStack;FFF)V", at = @At("TAIL"))
     private void setupTransformsRotate(T squidEntity, MatrixStack matrixStack, float f, float g, float h, CallbackInfo ci) {
-        String name = squidEntity.getName().asString();
+        String name = squidEntity.getName().getString();
 
         if (name.equals("Dinnerbone") || name.equals("Grumm")) {
             matrixStack.translate(0.0D, squidEntity.getHeight() + 0.1F, 0.0D);

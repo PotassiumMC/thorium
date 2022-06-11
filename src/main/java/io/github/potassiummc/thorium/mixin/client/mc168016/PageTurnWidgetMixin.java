@@ -14,7 +14,7 @@ public class PageTurnWidgetMixin {
 
     @Redirect(method = "playDownSound(Lnet/minecraft/client/sound/SoundManager;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/sound/PositionedSoundInstance;master(Lnet/minecraft/sound/SoundEvent;F)Lnet/minecraft/client/sound/PositionedSoundInstance;"))
     public PositionedSoundInstance playDownSoundGetSound(SoundEvent sound, float pitch) {
-        return new PositionedSoundInstance(sound.getId(), SoundCategory.PLAYERS, 0.25F, pitch, false, 0, SoundInstance.AttenuationType.LINEAR, 0.0D, 0.0D, 0.0D, true);
+        return new PositionedSoundInstance(sound.getId(), SoundCategory.PLAYERS, 0.25F, pitch, SoundInstance.createRandom(), false, 0, SoundInstance.AttenuationType.LINEAR, 0.0D, 0.0D, 0.0D, true);
     }
 
 }

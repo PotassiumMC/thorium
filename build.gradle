@@ -30,7 +30,7 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-    modImplementation include("ca.stellardrift:confabricate:3.0.0-SNAPSHOT")
+    modImplementation include("org.spongepowered:configurate-hocon:4.1.2")
 }
 
 processResources {

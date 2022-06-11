@@ -11,23 +11,22 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 import java.util.List;
-import java.util.Set;
 
-@Mixin(targets = "net.minecraft.client.render.chunk.ChunkBuilder$BuiltChunk$RebuildTask")
+@Mixin(net.minecraft.client.render.chunk.ChunkBuilder.BuiltChunk.RebuildTask.class)
 public class RebuildTaskMixin {
 
-    @Redirect(method = "addBlockEntity(Lnet/minecraft/client/render/chunk/ChunkBuilder$ChunkData;Ljava/util/Set;Lnet/minecraft/block/entity/BlockEntity;)V", at = @At(value = "INVOKE", target = "Ljava/util/List;add(Ljava/lang/Object;)Z"))
+    @Redirect(method = "addBlockEntity(Lnet/minecraft/client/render/chunk/ChunkBuilder$BuiltChunk$RebuildTask$RenderData;Lnet/minecraft/block/entity/BlockEntity;)V", at = @At(value = "INVOKE", target = "Ljava/util/List;add(Ljava/lang/Object;)Z"))
     public boolean cancelBlockEntitiesAdd(List<?> instance, Object e) {
         return false;
     }
 
-    @Inject(method = "addBlockEntity(Lnet/minecraft/client/render/chunk/ChunkBuilder$ChunkData;Ljava/util/Set;Lnet/minecraft/block/entity/BlockEntity;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/block/entity/BlockEntityRenderer;rendersOutsideBoundingBox(Lnet/minecraft/block/entity/BlockEntity;)Z", shift = At.Shift.AFTER), locals = LocalCapture.CAPTURE_FAILHARD)
-    public <E extends BlockEntity> void addToChunkBlockEntityList(ChunkBuilder.ChunkData data, Set<BlockEntity> blockEntities, E blockEntity, CallbackInfo ci, BlockEntityRenderer<BlockEntity> blockEntityRenderer) {
+    @Inject(method = "addBlockEntity(Lnet/minecraft/client/render/chunk/ChunkBuilder$BuiltChunk$RebuildTask$RenderData;Lnet/minecraft/block/entity/BlockEntity;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/block/entity/BlockEntityRenderer;rendersOutsideBoundingBox(Lnet/minecraft/block/entity/BlockEntity;)Z", shift = At.Shift.AFTER), locals = LocalCapture.CAPTURE_FAILHARD)
+    public <E extends BlockEntity> void addToChunkBlockEntityList(ChunkBuilder.BuiltChunk.RebuildTask.RenderData renderData, E blockEntity, CallbackInfo ci, BlockEntityRenderer<E> blockEntityRenderer) {
         // Only add it to the *chunk* block entity list if it isn't already in the block entity renderer list.
         if (blockEntityRenderer.rendersOutsideBoundingBox(blockEntity)) {
             return;
         }
-        data.getBlockEntities().add(blockEntity);
+        renderData.blockEntities.add(blockEntity);
     }
 
 

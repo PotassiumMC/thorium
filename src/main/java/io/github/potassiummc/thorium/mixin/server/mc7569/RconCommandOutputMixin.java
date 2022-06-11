@@ -9,8 +9,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import java.util.UUID;
-
 @Mixin(RconCommandOutput.class)
 public class RconCommandOutputMixin {
 
@@ -18,8 +16,8 @@ public class RconCommandOutputMixin {
     @Shadow
     private StringBuffer buffer;
 
-    @Inject(method = "sendSystemMessage(Lnet/minecraft/text/Text;Ljava/util/UUID;)V", at = @At(value = "INVOKE", target = "Ljava/lang/StringBuffer;append(Ljava/lang/String;)Ljava/lang/StringBuffer;", shift = At.Shift.AFTER))
-    public void sendNewlineAfterMessage(Text message, UUID sender, CallbackInfo ci) {
+    @Inject(method = "sendMessage(Lnet/minecraft/text/Text;)V", at = @At(value = "INVOKE", target = "Ljava/lang/StringBuffer;append(Ljava/lang/String;)Ljava/lang/StringBuffer;", shift = At.Shift.AFTER))
+    public void sendNewlineAfterMessage(Text message, CallbackInfo ci) {
         this.buffer.append("\n");
     }
 
