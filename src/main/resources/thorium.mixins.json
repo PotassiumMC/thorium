@@ -54,7 +54,6 @@
     "client.mc215531.InGameHudMixin",
     "client.mc227169.PlayerEntityRendererMixin",
     "client.mc233042.DirectConnectScreenMixin",
-    "client.mc249054.HandledScreenMixin",
     "client.mc35361.MinecraftClientMixin",
     "client.mc4490.FishingBobberEntityRendererMixin",
     "client.mc46503.ClientPlayNetworkHandlerMixin",
