@@ -27,7 +27,7 @@ public class InGameHudMixin {
     public void cancelEarlyDebugRender(DebugHud instance, MatrixStack matrices) {
     }
 
-    @Inject(method = "render(Lnet/minecraft/client/util/math/MatrixStack;F)V", at = @At(value = "INVOKE", target = "Lcom/mojang/blaze3d/systems/RenderSystem;enableBlend()V", shift = At.Shift.BEFORE))
+    @Inject(method = "render(Lnet/minecraft/client/util/math/MatrixStack;F)V", at = @At(value = "INVOKE", target = "Lcom/mojang/blaze3d/systems/RenderSystem;enableBlend()V", shift = At.Shift.BEFORE, ordinal = 4))
     public void renderDebugScreenAfterScoreboard(MatrixStack matrices, float tickDelta, CallbackInfo ci) {
         if (this.client.options.debugEnabled) {
             this.debugHud.render(matrices);
