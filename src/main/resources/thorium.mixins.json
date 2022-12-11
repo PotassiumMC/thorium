@@ -56,6 +56,7 @@
     "client.mc46737.GameRendererMixin",
     "client.mc46766.MinecraftClientMixin",
     "client.mc55347.ClientPlayNetworkHandlerMixin",
+    "client.mc62997.InGameHudMixin",
     "client.mc75721.BookScreenMixin"
   ]
 }

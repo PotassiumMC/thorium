@@ -14,6 +14,7 @@ Please keep in mind that some fixes may (unintentionally) also fix similar issue
 | [MC-46737](https://bugs.mojang.com/browse/MC-46737)   | Spectating entities whilst in third person still applies the mob's shader                                   |
 | [MC-46766](https://bugs.mojang.com/browse/MC-46766)   | Mining a block in Survival, then changing to Spectator creates a breaking animation and sound               |
 | [MC-55347](https://bugs.mojang.com/browse/MC-55347)   | Title with long duration shows in other world                                                               |
+| [MC-62997](https://bugs.mojang.com/browse/MC-62997)   | Scoreboard overlaps debug screen                                                                            |
 | [MC-69216](https://bugs.mojang.com/browse/MC-69216)   | Switching to spectator mode while fishing keeps rod cast                                                    |
 | [MC-75721](https://bugs.mojang.com/browse/MC-75721)   | Arrow buttons within the book GUI are rendered above tooltips                                               |
 | [MC-81773](https://bugs.mojang.com/browse/MC-81773)   | Bows and tridents drawn in survival/creative/adventure mode can be released in spectator mode               |
