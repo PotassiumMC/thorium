@@ -24,6 +24,7 @@
     "server.mc237843.ServerPlayNetworkHandlerMixin",
     "server.mc244948.BundleItemMixin",
     "server.mc245394.RaidMixin",
+    "server.mc252934.AbstractDecorationEntityMixin",
     "server.mc6431.PlayerManagerMixin",
     "server.mc6431.ServerPlayerEntityMixin",
     "server.mc69216.ServerPlayerEntityMixin",
