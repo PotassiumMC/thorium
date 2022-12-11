@@ -29,6 +29,7 @@ Please keep in mind that some fixes may (unintentionally) also fix similar issue
 | [MC-139041](https://bugs.mojang.com/browse/MC-139041) | The sounds of fishing bobbers aren't controlled by the "Players" sound slider                               |
 | [MC-143474](https://bugs.mojang.com/browse/MC-143474) | Respawning causes your hotbar to reset to the first space                                                   |
 | [MC-144761](https://bugs.mojang.com/browse/MC-144761) | Animated texture interpolation ignores alpha channel during transition from/to transparent pixels           |
+| [MC-147659](https://bugs.mojang.com/browse/MC-147659) | Some witch huts spawn the incorrect cat                                                                     |
 | [MC-147766](https://bugs.mojang.com/browse/MC-147766) | Shift key stays pressed until press any other key                                                           |
 | [MC-148993](https://bugs.mojang.com/browse/MC-148993) | While spectating a player, chunks cannot be loaded                                                          |
 | [MC-159283](https://bugs.mojang.com/browse/MC-159283) | The End terrain does not generate in multiple rings centered around the world center                        |
