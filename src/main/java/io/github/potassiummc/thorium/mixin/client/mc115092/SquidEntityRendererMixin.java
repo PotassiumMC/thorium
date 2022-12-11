@@ -3,7 +3,7 @@ package io.github.potassiummc.thorium.mixin.client.mc115092;
 import net.minecraft.client.render.entity.SquidEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.passive.SquidEntity;
-import net.minecraft.util.math.Vec3f;
+import net.minecraft.util.math.RotationAxis;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -19,7 +19,7 @@ public class SquidEntityRendererMixin<T extends SquidEntity> {
 
         if (name.equals("Dinnerbone") || name.equals("Grumm")) {
             matrixStack.translate(0.0D, squidEntity.getHeight() + 0.1F, 0.0D);
-            matrixStack.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(180.0F));
+            matrixStack.multiply(RotationAxis.POSITIVE_X.rotationDegrees(180.0F));
         }
     }
 

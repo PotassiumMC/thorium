@@ -12,8 +12,9 @@ public class ServerPlayerEntityMixin {
 
     @Inject(method = "changeGameMode(Lnet/minecraft/world/GameMode;)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/network/ServerPlayerEntity;stopRiding()V", shift = At.Shift.AFTER))
     private void changeGameModeRemoveFishingHook(GameMode gameMode, CallbackInfoReturnable<Boolean> cir) {
-        if (((ServerPlayerEntity) (Object) this).fishHook != null) {
-            ((ServerPlayerEntity) (Object) this).fishHook.discard();
+        ServerPlayerEntity me = (ServerPlayerEntity) (Object) this;
+        if (me.fishHook != null) {
+            me.fishHook.discard();
         }
     }
 

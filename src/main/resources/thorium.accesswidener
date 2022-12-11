@@ -5,5 +5,6 @@ extendable class net/minecraft/client/gui/screen/StatsScreen$ItemStatsListWidget
 extendable class net/minecraft/client/gui/screen/option/LanguageOptionsScreen$LanguageSelectionListWidget
 accessible class net/minecraft/client/render/chunk/ChunkBuilder$BuiltChunk$RebuildTask
 accessible class net/minecraft/client/render/chunk/ChunkBuilder$BuiltChunk$RebuildTask$RenderData
-accessible class net/minecraft/client/texture/Sprite$Animation
-accessible class net/minecraft/client/texture/Sprite$AnimationFrame
+accessible class net/minecraft/client/texture/SpriteContents$Animation
+accessible class net/minecraft/client/texture/SpriteContents$AnimationFrame
+accessible class net/minecraft/client/texture/SpriteContents$AnimatorImpl

@@ -18,7 +18,6 @@ Please keep in mind that some fixes may (unintentionally) also fix similar issue
 | [MC-75721](https://bugs.mojang.com/browse/MC-75721)   | Arrow buttons within the book GUI are rendered above tooltips                                                   |
 | [MC-81773](https://bugs.mojang.com/browse/MC-81773)   | Bows and tridents drawn in survival/creative/adventure mode can be released in spectator mode                   |
 | [MC-84661](https://bugs.mojang.com/browse/MC-84661)   | Glowing is considered a positive effect in potion item tooltips                                                 |
-| [MC-84873](https://bugs.mojang.com/browse/MC-84873)   | DeathTime values 20+ cause corrupted mobs                                                                       |
 | [MC-86252](https://bugs.mojang.com/browse/MC-86252)   | Shields stay blocking and allow left-clicking under a specific condition                                        |
 | [MC-115092](https://bugs.mojang.com/browse/MC-115092) | Squid/glow squid named "Dinnerbone" or "Grumm" is not upside-down                                               |
 | [MC-112730](https://bugs.mojang.com/browse/MC-112730) | Beacon beam and structure block render twice per frame                                                          |
@@ -30,10 +29,8 @@ Please keep in mind that some fixes may (unintentionally) also fix similar issue
 | [MC-139041](https://bugs.mojang.com/browse/MC-139041) | The sounds of fishing bobbers aren't controlled by the "Players" sound slider                                   |
 | [MC-143474](https://bugs.mojang.com/browse/MC-143474) | Respawning causes your hotbar to reset to the first space                                                       |
 | [MC-144761](https://bugs.mojang.com/browse/MC-144761) | Animated texture interpolation ignores alpha channel during transition from/to transparent pixels               |
-| [MC-145748](https://bugs.mojang.com/browse/MC-145748) | Clicking a settings button when there's a slider under the mouse in the next screen plays the click sound twice |
 | [MC-147766](https://bugs.mojang.com/browse/MC-147766) | Shift key stays pressed until press any other key                                                               |
 | [MC-148993](https://bugs.mojang.com/browse/MC-148993) | While spectating a player, chunks cannot be loaded                                                              |
-| [MC-151412](https://bugs.mojang.com/browse/MC-151412) | "Edit Server Info" window does not focus "Server Name" text field automatically                                 |
 | [MC-159283](https://bugs.mojang.com/browse/MC-159283) | The End terrain does not generate in multiple rings centered around the world center                            |
 | [MC-165595](https://bugs.mojang.com/browse/MC-165595) | Guardian beam does not render when over a certain "Time" in level.dat                                           |
 | [MC-168016](https://bugs.mojang.com/browse/MC-168016) | The sounds of pages in books rustling aren't controlled by any sound sliders                                    |
@@ -54,8 +51,6 @@ Please keep in mind that some fixes may (unintentionally) also fix similar issue
 | [MC-225364](https://bugs.mojang.com/browse/MC-225364) | Chorus flowers can be shot in adventure                                                                         |
 | [MC-227169](https://bugs.mojang.com/browse/MC-227169) | The main hand is broken when you hold a crossbow loaded into the secondary hand                                 |
 | [MC-227337](https://bugs.mojang.com/browse/MC-227337) | When a shulker bullet hits an entity, the explodes sound is not played and particles are not produced           |
-| [MC-233042](https://bugs.mojang.com/browse/MC-233042) | Server Address field isn't focused when Direct Connection menu is opened                                        |
 | [MC-237843](https://bugs.mojang.com/browse/MC-237843) | Players can be idle kicked whilst viewing the end credits                                                       |
-| [MC-244694](https://bugs.mojang.com/browse/MC-244694) | The sounds of goats stomping and ramming aren't controlled by the "Friendly Creatures" sound slider             |
 | [MC-244948](https://bugs.mojang.com/browse/MC-244948) | The minecraft:item.bundle.remove_one sound plays even when no items are unpacked from bundles                   |
 | [MC-245394](https://bugs.mojang.com/browse/MC-245394) | The sounds of raid horns blaring aren't controlled by the correct sound slider                                  |
