@@ -3,7 +3,7 @@
 # thorium
 
 [![Discord Shield](https://discordapp.com/api/guilds/938463953644847205/widget.png?style=shield)](https://discord.gg/bXG8H6PVuS)
-[![Build Status](https://img.shields.io/github/workflow/status/PotassiumMC/thorium/build/master)](https://github.com/PotassiumMC/thorium/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/PotassiumMC/thorium/build.yml?branch=master)](https://github.com/PotassiumMC/thorium/actions)
 [![License](https://img.shields.io/github/license/PotassiumMC/thorium)](https://github.com/PotassiumMC/thorium/blob/master/LICENSE)
 [![Latest Release](https://img.shields.io/github/v/release/PotassiumMC/thorium)](https://github.com/PotassiumMC/thorium/releases)
 [![CurseForge Download Count](https://cf.way2muchnoise.eu/full_thorium_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/thorium)
