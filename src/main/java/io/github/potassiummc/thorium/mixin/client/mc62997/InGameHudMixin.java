@@ -1,6 +1,7 @@
 package io.github.potassiummc.thorium.mixin.client.mc62997;
 
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.DebugHud;
 import net.minecraft.client.gui.hud.InGameHud;
 import net.minecraft.client.util.math.MatrixStack;
@@ -23,14 +24,14 @@ public class InGameHudMixin {
     @Shadow
     private DebugHud debugHud;
 
-    @Redirect(method = "render(Lnet/minecraft/client/util/math/MatrixStack;F)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/hud/DebugHud;render(Lnet/minecraft/client/util/math/MatrixStack;)V"))
-    public void cancelEarlyDebugRender(DebugHud instance, MatrixStack matrices) {
+    @Redirect(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/hud/DebugHud;render(Lnet/minecraft/client/gui/DrawContext;)V"))
+    public void cancelEarlyDebugRender(DebugHud instance, DrawContext context) {
     }
 
-    @Inject(method = "render(Lnet/minecraft/client/util/math/MatrixStack;F)V", at = @At(value = "INVOKE", target = "Lcom/mojang/blaze3d/systems/RenderSystem;enableBlend()V", shift = At.Shift.BEFORE, ordinal = 4))
-    public void renderDebugScreenAfterScoreboard(MatrixStack matrices, float tickDelta, CallbackInfo ci) {
+    @Inject(method = "render", at = @At(value = "INVOKE", target = "Lcom/mojang/blaze3d/systems/RenderSystem;enableBlend()V", shift = At.Shift.BEFORE, ordinal = 3))
+    public void renderDebugScreenAfterScoreboard(DrawContext context, float tickDelta, CallbackInfo ci) {
         if (this.client.options.debugEnabled) {
-            this.debugHud.render(matrices);
+            this.debugHud.render(context);
         }
     }
 

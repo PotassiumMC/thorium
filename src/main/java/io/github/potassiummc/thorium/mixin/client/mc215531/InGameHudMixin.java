@@ -17,7 +17,7 @@ public class InGameHudMixin {
     private MinecraftClient client;
 
     // Maybe servers somehow rely on this behaviour? If your server (ab)uses this bug, please make a GH issue.
-    @Redirect(method = "render(Lnet/minecraft/client/util/math/MatrixStack;F)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/option/Perspective;isFirstPerson()Z"))
+    @Redirect(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/option/Perspective;isFirstPerson()Z"))
     private boolean renderIsFirstPersonOrSpectator(Perspective instance) {
         return instance.isFirstPerson() && !client.player.isSpectator();
     }

@@ -18,7 +18,7 @@ public class ShulkerBulletEntityMixin {
         // Based on code analysis by Avoma: https://bugs.mojang.com/browse/MC-227337?focusedCommentId=1135924#comment-1135924
         ShulkerBulletEntity me = (ShulkerBulletEntity) (Object) this;
 
-        ((ServerWorld) me.world).spawnParticles(ParticleTypes.EXPLOSION, me.getX(), me.getY(), me.getZ(), 2, 0.2D, 0.2D, 0.2D, 0.0D);
+        ((ServerWorld) me.getWorld()).spawnParticles(ParticleTypes.EXPLOSION, me.getX(), me.getY(), me.getZ(), 2, 0.2D, 0.2D, 0.2D, 0.0D);
         me.playSound(SoundEvents.ENTITY_SHULKER_BULLET_HIT, 1.0F, 1.0F);
     }
 
