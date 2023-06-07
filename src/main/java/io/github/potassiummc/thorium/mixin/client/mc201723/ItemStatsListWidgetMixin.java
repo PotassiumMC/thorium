@@ -20,7 +20,7 @@ public class ItemStatsListWidgetMixin extends AlwaysSelectedEntryListWidget<Stat
     }
 
     // Based on code analysis by ISRosillo14: https://bugs.mojang.com/browse/MC-201723
-    @Redirect(method = "renderHeader(Lnet/minecraft/client/util/math/MatrixStack;IILnet/minecraft/client/render/Tessellator;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Mouse;wasLeftButtonClicked()Z"))
+    @Redirect(method = "renderHeader", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Mouse;wasLeftButtonClicked()Z"))
     private boolean renderHeaderWasLeftClicked(Mouse instance) {
         return true;
     }
